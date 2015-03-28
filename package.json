@@ -1,0 +1,26 @@
+{
+  "name": "IM",
+  "version": "1.0.0",
+  "description": "IM for LNUT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dayuoba/FirstIM_for_LNUT.git"
+  },
+  "keywords": [
+    "chat"
+  ],
+  "author": "dayuoba,kingzez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dayuoba/FirstIM_for_LNUT/issues"
+  },
+  "homepage": "https://github.com/dayuoba/FirstIM_for_LNUT",
+  "dependencies": {
+    "express": "^4.12.3",
+    "socket.io": "^1.3.5"
+  }
+}
