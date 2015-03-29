@@ -16,6 +16,8 @@ chatServer.configure = function(config) {
 
 chatServer.run = function() {
 	this.application.init();
+	this.application.components.webServer.init();
+	this.application.components.webServer.start();
 	this.application.run();
 	return this;
 };
