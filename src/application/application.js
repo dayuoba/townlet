@@ -31,13 +31,22 @@ Application.prototype.load = function(key, path) {
 	return this;
 };
 //[Description] Load utils,components,init components
-Application.prototype.init = function(first_argument) {
-	// body...
+Application.prototype.init = function() {
+	this.loadUtils();
+	this.loadComponents();
 };
 //[Description] run application -> run components by order
 //[Suggestion] considering of how to make the components run life-cycle correctly
-Application.prototype.run = function(first_argument) {
+Application.prototype.run = function() {
 	// body...
+};
+
+Application.prototype.loadComponents = function() {
+	appUtil.loadComponentsByOrder(this);
+};
+
+Application.prototype.loadUtils = function() {
+	appUtil.loadUtils(this);
 };
 
 //Getters

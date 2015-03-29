@@ -1,0 +1,6 @@
+{
+	"components": [{
+		"name": "webServer",
+		"lifecycle": [1, 1, 1, 1]
+	}]
+}
