@@ -1,9 +1,11 @@
 var express = require('express');
 var http = require('http');
+var socketio = require('socket.io');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var routes = require('./routes/index.js');
+var ioroutes = require('./routes/ioindex.js');
 
 
 module.exports = function(application) {
@@ -27,12 +29,16 @@ module.exports = function(application) {
 
 	webServer.start = function() {
 		var server = http.Server(app);
+		var io = socketio(server);
+		ioroutes(io);
 		server.listen(3000);
 		this.STATUS = 2;
 	};
 
 	webServer.afterStart = function() {
 		console.log('webServer started, listening port 3000');
+		console.log('webSocketServer started, listening port 3000');
+
 	};
 
 	webServer.stop = function() {
